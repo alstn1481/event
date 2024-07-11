@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+img {display: block;}
+
+#layout {width: 740px; height: 1100px; margin: auto; background-color: #1ea5a9;}
+
+/*상단*/
+header {position: relative; height: 490px; margin-bottom: 35px;}
+
+[alt="쌤"] {margin: 80px 0 0 auto; position: absolute; z-index: 1; top: 0; right: 0;}  /*z-index: 1;쓰려면 position속성 사용해야함*/
+[alt="말풍선"] {position: absolute; top: 0; right: 0;}
+[alt="별1"] {position: absolute; top: 70px; left: 45px;}
+[alt="별2"] {position: absolute; top: 140px; left: 25px;}
+[alt="별3"] {position: absolute; top: 200px; left: 450px;}
+
+h1 {position: absolute; top: 20px; left: 50px; line-height: 280%;}
+h1> b:nth-of-type(1) {font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal; color: #d0ff59; font-size: 50pt; padding-left: 80px;}
+h1> span:nth-of-type(1) {font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal; color: #d0ff59; font-size: 20pt; position: absolute; top: 10px;}
+h1 strong {font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal; color: white; text-shadow: 1px 1px 7px #000; font-size: 125px; line-height: 90%;}
+h1 i {display: block; position: relative; z-index: 1; margin-top: 20px;}
+[alt="화살표"] {position: absolute; bottom: 0; left: 8px;}
+h1 i> b {font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400 bold;
+    font-style: normal; display: inline-block; font-size: 25pt;}
+h1 i em {font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal; color: #d0ff59; font-size: 75pt; position: absolute; top: 20px;}
+
+h1 i em b {font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400 bold;
+    font-style: normal; color: black; font-size: 30pt; position: absolute;}
+
+
+/*메인*/
+main {    
+    background: url("../images/ribbon.png") no-repeat center top;
+    position: relative; z-index: 2;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size:1.2rem; line-height: 140%;
+    letter-spacing: -1px;
+}
+/*5월 고객감사 이벤트*/
+main h2 {
+    text-align: center; margin-top: 15px;
+    font-size:1.5rem; text-shadow: 0 0 5px rgb(170, 255, 0);    
+}
+/* 3시간: 7,500원 → 4,500원 */
+main h3 {
+    text-align: center; color:white;
+    font-size:1.8rem; margin-top:30px;
+}
+/* 7,500원 */
+main h3 em {
+    font-size:2.2rem; font-style: normal;
+}
+/* 화살표 */
+main h3 i {
+    font-style:normal;
+    color:#d0ff59;
+}
+/*4,500원*/
+main h3 strong {
+    font-size: 2.8rem;  color:#d0ff59;
+}
+/*오전 8시부터 오후 7시까지만 적용되던 학생할인이 오후 10시까지 하루종일 적용됩니다.*/
+main p {
+    font-size:1rem; font-weight: normal;
+    letter-spacing: -1.5pt;
+    text-align: center;
+    color:#87e9ff;
+    margin-top: 10px;
+}
+/*적용시간 + 적용대상 내용 전체 */
+main ul {
+    width:75%; margin:auto;
+    font-size:1.1rem; 
+    list-style-image: url("../images/dot.png");
+    list-style-position: inside;
+    margin-top: 40px;
+}
+main li:first-of-type {
+    color: #0025c8;
+}
+main li::marker {
+    color: black;
+}
+/*적용시간 + 적용대상*/
+main li:last-of-type {
+    display: flex;
+    background: url("../images/dot.png") no-repeat 0px 17px;
+
+}
+main li b {    
+    margin-right:15px;
+    color: black;   
+}
+/* 적용대상: 고품격~~~(강남....) */
+main li:last-of-type {
+    padding-top:10px;
+}
+main li:last-of-type b {
+    padding-right: 0;
+    display: inline-block;
+}
+main li:last-of-type span {
+    display: inline-block;
+    transform: translateY(10px);
+}
+main li:last-of-type b::before {
+    content: ".";
+    font-size: 2.5rem;
+    margin-right: 7px;
+    display: inline-block;
+    transform: translateY(-5px);
+}
+
+/*********************************************/
+/* 하단 */
+[alt="별4"] {position: absolute; top: 880px; left: 240px; opacity: 0; animation: abc 1s infinite both;}
+
+@keyframes abc {
+    to {opacity: 1;}
+}
+
+footer {
+    background: #313d49;
+    margin-top: 50px;
+    padding-bottom: 20px;;
+}
+/*더 많은 추가 할인 혜택을 보려면? */
+footer h3 {
+    font-family: "Gamja Flower", sans-serif;
+    font-size:2.3rem;
+    text-align: center;
+    padding:30px 0 20px; 
+    color:#d0ff59;
+}
+/* 추가 할인 혜택 */
+footer h3 em {
+    color:white;
+    font-style: normal;
+    display: inline-block;
+    line-height: 38%;
+    transform: translateY(15px);
+}
+/* 밑줄 애니메이션 */
+footer h3 em i {
+    display: inline-block;    
+    width:100%; height:2px;
+    margin-top:15px;
+    background:#d0ff59;
+    animation:width 1.2s infinite alternate both;
+}
+@keyframes width {
+    0%   {transform: scaleX(0);}
+    100% {transform: scaleX(1);}
+}
+footer div {
+    display: flex; justify-content: space-between;
+    width:75%; margin:auto;    
+}
+footer section {   
+    text-align: center;   width:32%;
+}
+/*신촌점,  종로점,  강남점 / 선릉점 */
+h4 {
+    background:#283442; color:#d0ff59;
+    padding:5px; margin-bottom:15px;
+}
+footer section p {
+    color:white;
+}
+/* 5% 더, 8회 이상 완납 시 */
+footer section  b {
+    display:block; color:#d0ff59;
+}
+footer section:nth-child(1) b {    
+    padding-bottom:5px;
+}
+footer section:nth-child(2) b {    
+    padding:2px;
+}
+footer section:nth-child(3) b {    
+    padding-bottom:3px;
+}
+/* 바로가기 >> */
+footer section button {
+    background:#d0ff59; 
+    font-weight: bold; font-size: 0.85rem; color:#1c2c3c;
+    display: inline-block; line-height: 150%;
+    border-radius: 5px; border:none;
+    box-sizing: 0 0 5px black;
+    padding:0px 20px; margin-top: 15px;    
+}
+footer section button b {
+    display: inline-block; color:#1c2c3c;
+    font-size: 1.5rem;
+    transform: translate(12px, 1pt);
+}
+
+
+
+
+
+
+
+
